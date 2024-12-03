@@ -412,7 +412,7 @@ func (c *cmdStorageGet) Command() *cobra.Command {
 		}
 
 		if len(args) == 1 {
-			return c.global.cmpStoragePoolConfigs(args[0])
+			return c.global.cmpStoragePoolConfigs(toComplete, args[0])
 		}
 
 		return nil, cobra.ShellCompDirectiveNoFileComp
@@ -1034,7 +1034,7 @@ func (c *cmdStorageUnset) Command() *cobra.Command {
 		}
 
 		if len(args) == 1 {
-			return c.global.cmpStoragePoolConfigs(args[0])
+			return c.global.cmpStoragePoolConfigs(toComplete, args[0])
 		}
 
 		return nil, cobra.ShellCompDirectiveNoFileComp

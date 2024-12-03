@@ -439,7 +439,7 @@ func (c *cmdNetworkForwardGet) Command() *cobra.Command {
 		}
 
 		if len(args) == 2 {
-			return c.global.cmpNetworkForwardConfigs(args[0], args[1])
+			return c.global.cmpNetworkForwardConfigs(toComplete, args[0], args[1])
 		}
 
 		return nil, cobra.ShellCompDirectiveNoFileComp
@@ -634,7 +634,7 @@ func (c *cmdNetworkForwardUnset) Command() *cobra.Command {
 		}
 
 		if len(args) == 2 {
-			return c.global.cmpNetworkForwardConfigs(args[0], args[1])
+			return c.global.cmpNetworkForwardConfigs(toComplete, args[0], args[1])
 		}
 
 		return nil, cobra.ShellCompDirectiveNoFileComp

@@ -514,7 +514,7 @@ func (c *cmdNetworkDetach) Command() *cobra.Command {
 		}
 
 		if len(args) == 1 {
-			return c.global.cmpNetworkInstances(args[0])
+			return c.global.cmpNetworkInstances(toComplete, args[0])
 		}
 
 		return nil, cobra.ShellCompDirectiveNoFileComp
@@ -611,7 +611,7 @@ func (c *cmdNetworkDetachProfile) Command() *cobra.Command {
 		}
 
 		if len(args) == 1 {
-			return c.global.cmpNetworkProfiles(args[0])
+			return c.global.cmpNetworkProfiles(toComplete, args[0])
 		}
 
 		return nil, cobra.ShellCompDirectiveNoFileComp
@@ -846,7 +846,7 @@ func (c *cmdNetworkGet) Command() *cobra.Command {
 		}
 
 		if len(args) == 1 {
-			return c.global.cmpNetworkConfigs(args[0])
+			return c.global.cmpNetworkConfigs(toComplete, args[0])
 		}
 
 		return nil, cobra.ShellCompDirectiveNoFileComp
@@ -1643,7 +1643,7 @@ func (c *cmdNetworkUnset) Command() *cobra.Command {
 		}
 
 		if len(args) == 1 {
-			return c.global.cmpNetworkConfigs(args[0])
+			return c.global.cmpNetworkConfigs(toComplete, args[0])
 		}
 
 		return nil, cobra.ShellCompDirectiveNoFileComp

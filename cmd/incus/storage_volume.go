@@ -774,7 +774,7 @@ func (c *cmdStorageVolumeDetach) Command() *cobra.Command {
 		}
 
 		if len(args) == 2 {
-			return c.global.cmpStoragePoolVolumeInstances(args[0], args[1])
+			return c.global.cmpStoragePoolVolumeInstances(toComplete, args[0], args[1])
 		}
 
 		return nil, cobra.ShellCompDirectiveNoFileComp
@@ -872,7 +872,7 @@ func (c *cmdStorageVolumeDetachProfile) Command() *cobra.Command {
 		}
 
 		if len(args) == 2 {
-			return c.global.cmpStoragePoolVolumeProfiles(args[0], args[1])
+			return c.global.cmpStoragePoolVolumeProfiles(toComplete, args[0], args[1])
 		}
 
 		return nil, cobra.ShellCompDirectiveNoFileComp
@@ -1206,7 +1206,7 @@ incus storage volume get default virtual-machine/data snapshots.expiry
 		}
 
 		if len(args) == 2 {
-			return c.global.cmpStoragePoolVolumeConfigs(args[0], args[1])
+			return c.global.cmpStoragePoolVolumeConfigs(toComplete, args[0], args[1])
 		}
 
 		return nil, cobra.ShellCompDirectiveNoFileComp
@@ -2240,7 +2240,7 @@ incus storage volume unset default virtual-machine/v1 snapshots.expiry
 		}
 
 		if len(args) == 2 {
-			return c.global.cmpStoragePoolVolumeConfigs(args[0], args[1])
+			return c.global.cmpStoragePoolVolumeConfigs(toComplete, args[0], args[1])
 		}
 
 		return nil, cobra.ShellCompDirectiveNoFileComp

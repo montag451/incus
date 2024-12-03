@@ -325,7 +325,7 @@ func (c *cmdNetworkZoneGet) Command() *cobra.Command {
 		}
 
 		if len(args) == 1 {
-			return c.global.cmpNetworkZoneConfigs(args[0])
+			return c.global.cmpNetworkZoneConfigs(toComplete, args[0])
 		}
 
 		return nil, cobra.ShellCompDirectiveNoFileComp
@@ -581,7 +581,7 @@ func (c *cmdNetworkZoneUnset) Command() *cobra.Command {
 		}
 
 		if len(args) == 1 {
-			return c.global.cmpNetworkZoneConfigs(args[0])
+			return c.global.cmpNetworkZoneConfigs(toComplete, args[0])
 		}
 
 		return nil, cobra.ShellCompDirectiveNoFileComp
@@ -1010,7 +1010,7 @@ func (c *cmdNetworkZoneRecordGet) Command() *cobra.Command {
 		}
 
 		if len(args) == 2 {
-			return c.global.cmpNetworkZoneRecordConfigs(args[0], args[1])
+			return c.global.cmpNetworkZoneRecordConfigs(toComplete, args[0], args[1])
 		}
 
 		return nil, cobra.ShellCompDirectiveNoFileComp
@@ -1273,7 +1273,7 @@ func (c *cmdNetworkZoneRecordUnset) Command() *cobra.Command {
 		}
 
 		if len(args) == 2 {
-			return c.global.cmpNetworkZoneRecordConfigs(args[0], args[1])
+			return c.global.cmpNetworkZoneRecordConfigs(toComplete, args[0], args[1])
 		}
 
 		return nil, cobra.ShellCompDirectiveNoFileComp

@@ -446,7 +446,7 @@ func (c *cmdProjectGet) Command() *cobra.Command {
 		}
 
 		if len(args) == 1 {
-			return c.global.cmpProjectConfigs(args[0])
+			return c.global.cmpProjectConfigs(toComplete, args[0])
 		}
 
 		return nil, cobra.ShellCompDirectiveNoFileComp
@@ -889,7 +889,7 @@ func (c *cmdProjectUnset) Command() *cobra.Command {
 		}
 
 		if len(args) == 1 {
-			return c.global.cmpProjectConfigs(args[0])
+			return c.global.cmpProjectConfigs(toComplete, args[0])
 		}
 
 		return nil, cobra.ShellCompDirectiveNoFileComp

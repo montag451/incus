@@ -478,7 +478,7 @@ func (c *cmdNetworkPeerGet) Command() *cobra.Command {
 		}
 
 		if len(args) == 2 {
-			return c.global.cmpNetworkPeerConfigs(args[0], args[1])
+			return c.global.cmpNetworkPeerConfigs(toComplete, args[0], args[1])
 		}
 
 		return nil, cobra.ShellCompDirectiveNoFileComp
@@ -665,7 +665,7 @@ func (c *cmdNetworkPeerUnset) Command() *cobra.Command {
 		}
 
 		if len(args) == 2 {
-			return c.global.cmpNetworkPeerConfigs(args[0], args[1])
+			return c.global.cmpNetworkPeerConfigs(toComplete, args[0], args[1])
 		}
 
 		return nil, cobra.ShellCompDirectiveNoFileComp

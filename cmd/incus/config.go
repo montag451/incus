@@ -399,7 +399,7 @@ func (c *cmdConfigGet) Command() *cobra.Command {
 		}
 
 		if len(args) == 1 {
-			return c.global.cmpInstanceAllKeys()
+			return c.global.cmpInstanceAllKeys(toComplete)
 		}
 
 		return nil, cobra.ShellCompDirectiveNoFileComp
@@ -544,7 +544,7 @@ incus config set core.https_address=[::]:8443
 		}
 
 		if len(args) == 1 {
-			return c.global.cmpInstanceAllKeys()
+			return c.global.cmpInstanceAllKeys(toComplete)
 		}
 
 		return nil, cobra.ShellCompDirectiveNoFileComp
@@ -893,7 +893,7 @@ func (c *cmdConfigUnset) Command() *cobra.Command {
 		}
 
 		if len(args) == 1 {
-			return c.global.cmpInstanceAllKeys()
+			return c.global.cmpInstanceAllKeys(toComplete)
 		}
 
 		return nil, cobra.ShellCompDirectiveNoFileComp

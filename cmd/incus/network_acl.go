@@ -315,7 +315,7 @@ func (c *cmdNetworkACLGet) Command() *cobra.Command {
 		}
 
 		if len(args) == 1 {
-			return c.global.cmpNetworkACLConfigs(args[0])
+			return c.global.cmpNetworkACLConfigs(toComplete, args[0])
 		}
 
 		return nil, cobra.ShellCompDirectiveNoFileComp
@@ -573,7 +573,7 @@ func (c *cmdNetworkACLUnset) Command() *cobra.Command {
 		}
 
 		if len(args) == 1 {
-			return c.global.cmpNetworkACLConfigs(args[0])
+			return c.global.cmpNetworkACLConfigs(toComplete, args[0])
 		}
 
 		return nil, cobra.ShellCompDirectiveNoFileComp
@@ -886,7 +886,7 @@ func (c *cmdNetworkACLRule) CommandAdd() *cobra.Command {
 		}
 
 		if len(args) == 2 {
-			return c.global.cmpNetworkACLRuleProperties()
+			return c.global.cmpNetworkACLRuleProperties(toComplete)
 		}
 
 		return nil, cobra.ShellCompDirectiveNoFileComp
@@ -1025,7 +1025,7 @@ func (c *cmdNetworkACLRule) CommandRemove() *cobra.Command {
 		}
 
 		if len(args) == 2 {
-			return c.global.cmpNetworkACLRuleProperties()
+			return c.global.cmpNetworkACLRuleProperties(toComplete)
 		}
 
 		return nil, cobra.ShellCompDirectiveNoFileComp

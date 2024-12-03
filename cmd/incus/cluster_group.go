@@ -896,7 +896,7 @@ func (c *cmdClusterGroupGet) Command() *cobra.Command {
 		}
 
 		if len(args) == 1 {
-			return c.global.cmpClusterGroupConfigs(args[0])
+			return c.global.cmpClusterGroupConfigs(toComplete, args[0])
 		}
 
 		return nil, cobra.ShellCompDirectiveNoFileComp
@@ -1053,7 +1053,7 @@ func (c *cmdClusterGroupUnset) Command() *cobra.Command {
 		}
 
 		if len(args) == 1 {
-			return c.global.cmpClusterGroupConfigs(args[0])
+			return c.global.cmpClusterGroupConfigs(toComplete, args[0])
 		}
 
 		return nil, cobra.ShellCompDirectiveNoFileComp

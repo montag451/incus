@@ -233,9 +233,9 @@ func (c *cmdConfigDeviceGet) Command() *cobra.Command {
 
 		if len(args) == 1 {
 			if c.config != nil {
-				return c.global.cmpInstanceDeviceNames(args[0])
+				return c.global.cmpInstanceDeviceNames(toComplete, args[0])
 			} else if c.profile != nil {
-				return c.global.cmpProfileDeviceNames(args[0])
+				return c.global.cmpProfileDeviceNames(toComplete, args[0])
 			}
 		}
 
@@ -514,9 +514,9 @@ func (c *cmdConfigDeviceRemove) Command() *cobra.Command {
 		}
 
 		if c.config != nil {
-			return c.global.cmpInstanceDeviceNames(args[0])
+			return c.global.cmpInstanceDeviceNames(toComplete, args[0])
 		} else if c.profile != nil {
-			return c.global.cmpProfileDeviceNames(args[0])
+			return c.global.cmpProfileDeviceNames(toComplete, args[0])
 		}
 
 		return nil, cobra.ShellCompDirectiveNoFileComp
@@ -642,9 +642,9 @@ For backward compatibility, a single configuration key may still be set with:
 
 		if len(args) == 1 {
 			if c.config != nil {
-				return c.global.cmpInstanceDeviceNames(args[0])
+				return c.global.cmpInstanceDeviceNames(toComplete, args[0])
 			} else if c.profile != nil {
-				return c.global.cmpProfileDeviceNames(args[0])
+				return c.global.cmpProfileDeviceNames(toComplete, args[0])
 			}
 		}
 
@@ -856,9 +856,9 @@ func (c *cmdConfigDeviceUnset) Command() *cobra.Command {
 
 		if len(args) == 1 {
 			if c.config != nil {
-				return c.global.cmpInstanceDeviceNames(args[0])
+				return c.global.cmpInstanceDeviceNames(toComplete, args[0])
 			} else if c.profile != nil {
-				return c.global.cmpProfileDeviceNames(args[0])
+				return c.global.cmpProfileDeviceNames(toComplete, args[0])
 			}
 		}
 
